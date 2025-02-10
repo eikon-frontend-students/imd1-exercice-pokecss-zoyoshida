@@ -5,12 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cartes Pokémon</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "bta0qbq",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
   </head>
   <body>
     <h1>Pokémon Cards</h1>
     <div class="cards-container">
-      <article class="pokemon-card" id="pokemon-card-1">
-        <span class="pokemon-id">1</span>
+      <article class="pokemon-card plant-type" id="pokemon-card-1">
+        <span class="pokemon-id">n.1</span>
         <img
           class="pokemon-image"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
@@ -18,8 +50,8 @@
         />
         <h2 class="pokemon-name">Bulbizarre</h2>
         <div class="pokemon-types">
-          <span class="pokemon-type">Plante</span>
-          <span class="pokemon-type">Poison</span>
+          <span class="pokemon-type plant">Plante</span>
+          <span class="pokemon-type poison">Poison</span>
         </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
@@ -48,8 +80,8 @@
           </div>
         </div>
       </article>
-      <article class="pokemon-card" id="pokemon-card-2">
-        <span class="pokemon-id">2</span>
+      <article class="pokemon-card plant-type" id="pokemon-card-2">
+        <span class="pokemon-id">N.2</span>
         <img
           class="pokemon-image"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
@@ -57,8 +89,8 @@
         />
         <h2 class="pokemon-name">Herbizarre</h2>
         <div class="pokemon-types">
-          <span class="pokemon-type">Plante</span>
-          <span class="pokemon-type">Poison</span>
+          <span class="pokemon-type plant">Plante</span>
+          <span class="pokemon-type poison">Poison</span>
         </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
@@ -87,8 +119,8 @@
           </div>
         </div>
       </article>
-      <article class="pokemon-card" id="pokemon-card-3">
-        <span class="pokemon-id">3</span>
+      <article class="pokemon-card plant-type" id="pokemon-card-3">
+        <span class="pokemon-id">N.3</span>
         <img
           class="pokemon-image"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
@@ -96,8 +128,8 @@
         />
         <h2 class="pokemon-name">Florizarre</h2>
         <div class="pokemon-types">
-          <span class="pokemon-type">Plante</span>
-          <span class="pokemon-type">Poison</span>
+          <span class="pokemon-type plant">Plante</span>
+          <span class="pokemon-type poison">Poison</span>
         </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
@@ -126,15 +158,17 @@
           </div>
         </div>
       </article>
-      <article class="pokemon-card" id="pokemon-card-4">
-        <span class="pokemon-id">4</span>
+      <article class="pokemon-card fire-type" id="pokemon-card-4">
+        <span class="pokemon-id">N.4</span>
         <img
           class="pokemon-image"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
           alt="Image du Pokémon"
         />
         <h2 class="pokemon-name">Salamèche</h2>
-        <div class="pokemon-types"><span class="pokemon-type">Feu</span></div>
+        <div class="pokemon-types">
+          <span class="pokemon-type fire">Feu</span>
+        </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
             <span>PV</span>
@@ -162,15 +196,17 @@
           </div>
         </div>
       </article>
-      <article class="pokemon-card" id="pokemon-card-5">
-        <span class="pokemon-id">5</span>
+      <article class="pokemon-card fire-type" id="pokemon-card-5">
+        <span class="pokemon-id">N.5</span>
         <img
           class="pokemon-image"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
           alt="Image du Pokémon"
         />
         <h2 class="pokemon-name">Reptincel</h2>
-        <div class="pokemon-types"><span class="pokemon-type">Feu</span></div>
+        <div class="pokemon-types">
+          <span class="pokemon-type fire">Feu</span>
+        </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
             <span>PV</span>
@@ -198,8 +234,8 @@
           </div>
         </div>
       </article>
-      <article class="pokemon-card" id="pokemon-card-6">
-        <span class="pokemon-id">6</span>
+      <article class="pokemon-card fire-type" id="pokemon-card-6">
+        <span class="pokemon-id">N.6</span>
         <img
           class="pokemon-image"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
@@ -207,8 +243,8 @@
         />
         <h2 class="pokemon-name">Dracaufeu</h2>
         <div class="pokemon-types">
-          <span class="pokemon-type">Feu</span>
-          <span class="pokemon-type">Vol</span>
+          <span class="pokemon-type fire">Feu</span>
+          <span class="pokemon-type fly">Vol</span>
         </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
@@ -237,15 +273,17 @@
           </div>
         </div>
       </article>
-      <article class="pokemon-card" id="pokemon-card-7">
-        <span class="pokemon-id">7</span>
+      <article class="pokemon-card water-type" id="pokemon-card-7">
+        <span class="pokemon-id">N.7</span>
         <img
           class="pokemon-image"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
           alt="Image du Pokémon"
         />
         <h2 class="pokemon-name">Carapuce</h2>
-        <div class="pokemon-types"><span class="pokemon-type">Eau</span></div>
+        <div class="pokemon-types">
+          <span class="pokemon-type water">Eau</span>
+        </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
             <span>PV</span>
@@ -273,15 +311,17 @@
           </div>
         </div>
       </article>
-      <article class="pokemon-card" id="pokemon-card-8">
-        <span class="pokemon-id">8</span>
+      <article class="pokemon-card water-type" id="pokemon-card-8">
+        <span class="pokemon-id">N.8</span>
         <img
           class="pokemon-image"
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
           alt="Image du Pokémon"
         />
         <h2 class="pokemon-name">Carabaffe</h2>
-        <div class="pokemon-types"><span class="pokemon-type">Eau</span></div>
+        <div class="pokemon-types">
+          <span class="pokemon-type water">Eau</span>
+        </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
             <span>PV</span>
@@ -309,15 +349,24 @@
           </div>
         </div>
       </article>
-      <article class="pokemon-card" id="pokemon-card-9">
-        <span class="pokemon-id">9</span>
-        <img
-          class="pokemon-image"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
-          alt="Image du Pokémon"
-        />
+      <article class="pokemon-card water-type" id="pokemon-card-9">
+        <span class="pokemon-id">N.9</span>
+        <a id="easteregg">
+          <img
+            class="pokemon-image blastoise-off"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+            alt="Image du Pokémon"
+          />
+          <img
+            class="pokemon-image blastoise-on"
+            src="/pokemon-blastoise.gif"
+            alt="Big Man Blastoise"
+          />
+        </a>
         <h2 class="pokemon-name">Tortank</h2>
-        <div class="pokemon-types"><span class="pokemon-type">Eau</span></div>
+        <div class="pokemon-types">
+          <span class="pokemon-type water">Eau</span>
+        </div>
         <div class="pokemon-stats">
           <div class="pokemon-stat">
             <span>PV</span>
